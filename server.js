@@ -1,4 +1,5 @@
 import http from "http";
+import app from "./src/app.js";
 
 const PORT = 3000;
 
@@ -13,6 +14,6 @@ const server = http.createServer((req,res) => {
     res.end(routes[req.url]);
 });
 
-server.listen(PORT,() => {
+app.listen(PORT,() => {
     console.log("escutando servidor!");
 });
