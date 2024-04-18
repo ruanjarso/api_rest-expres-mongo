@@ -32,7 +32,9 @@ app.get("/produtos/:id", (req,res) => {
 })
 
 app.put("/produtos/:id", (req,res) => {
-    const index = buscaProduto(produtos)
+    const index = buscaProduto(req.params.id);
+    produtos[index].produto = req.body.produto;
+    res.status(200).send("atualizado");
 })
 
 app.post("/produtos",(req,res) => {
