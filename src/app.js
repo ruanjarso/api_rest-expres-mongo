@@ -42,6 +42,12 @@ app.post("/produtos",(req,res) => {
     produtos.push(req.body);
 });
 
+app.delete("/produtos/:id",(req,res) => {
+    const index = buscaProduto(req.params.id);
+    produtos.splice(index,1);
+    res.status(200).send("o produto foi deletado!");
+})
+
 
 
 export default app;
