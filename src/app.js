@@ -31,6 +31,9 @@ app.get("/produtos/:id", (req,res) => {
     res.status(200).json(produtos[index]);
 })
 
+app.put("/produtos/:id", (req,res) => {
+    const index = buscaProduto(produtos)
+})
 
 app.post("/produtos",(req,res) => {
     res.status(200).send("produto cadastrado!")
