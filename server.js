@@ -5,7 +5,7 @@ const PORT = 3000;
 
 const routes = [{
     "/":"rota 1",
-    "/route2":"rota 2",
+    "/produtos":"rota 2",
     "/route3":"rota3"
 }]
 

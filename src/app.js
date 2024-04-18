@@ -16,14 +16,13 @@ const produtos = [{
     "quantidade": 20
 }]
 
-app.get("/",(req,res) => {
-    res.status(200).send("TESTE 1");
+app.get("/produtos",(req,res) => {
+    res.status(200).json(produtos);
 });
 
-app.get("/prox/:id",(req,res) => {
-    const index = buscaLivro(req.params.id);
-    res.status(200).json(livros[index]);
+app.post("/produtos",(req,res) => {
+    res.status(200).send("produto cadastrado!")
+    produtos.push(req.body);
 });
-
 
 export default app;
